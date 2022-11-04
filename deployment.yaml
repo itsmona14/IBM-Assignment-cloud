@@ -3,11 +3,11 @@ kind: Service
 metadata:
    name: hello-world-deployment
 spec:
-   ports:
-   - port: 5000
-     targetPort: 5000
    selector:
      app: hello-world
+   ports:
+   - port: 5000
+   type: NodePort
 ---
 apiVersion: apps/v1
 kind: Deployment
